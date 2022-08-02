@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p I'm talking about love!!
+  a(href="/new") Add new message 
+  - const textMessages = JSON.stringify(messages['messages'])
+  - messages = messages['messages']
+  each n in messages
+    ul
+      li=n.user
+      li=n.text
+      li=n.added
+  p hello?

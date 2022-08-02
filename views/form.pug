@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 welcome to the form page
+  form(action="/new", method="post")
+    label(for="author-name") Name: 
+    input(type="text" name="author-name" id="author-name")
+    label(for="message-text") Message:
+    input(type="text" name="message-text" id="message-text")
+    button(type="submit") Submit
